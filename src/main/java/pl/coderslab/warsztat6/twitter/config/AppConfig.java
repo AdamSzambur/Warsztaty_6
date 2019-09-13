@@ -20,7 +20,7 @@ import javax.validation.Validator;
 @ComponentScan(basePackages = {"pl.coderslab.warsztat6.twitter"},
         excludeFilters = @ComponentScan.Filter(type = FilterType.ANNOTATION,value = EnableWebMvc.class))
 @EnableTransactionManagement
-@EnableJpaRepositories(basePackages = "pl.coderslab.warsztat6.twetter.repositores")
+@EnableJpaRepositories(basePackages = "pl.coderslab.warsztat6.twitter.repositories")
 public class AppConfig extends WebMvcConfigurerAdapter {
     @Bean
     public LocalEntityManagerFactoryBean entityManagerFactory() {
@@ -39,7 +39,4 @@ public class AppConfig extends WebMvcConfigurerAdapter {
     public Validator validator() {
         return new LocalValidatorFactoryBean();
     }
-
-
-
 }

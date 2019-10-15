@@ -14,7 +14,6 @@ public class Tweet extends AbstractEntity {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-
     @Transient
     private Long commentsNumber;
 

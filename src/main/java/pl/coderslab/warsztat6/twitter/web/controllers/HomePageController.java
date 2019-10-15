@@ -65,6 +65,4 @@ public class HomePageController {
             return "redirect:/";
         }
     }
-
-
 }

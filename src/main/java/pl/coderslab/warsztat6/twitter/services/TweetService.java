@@ -33,8 +33,6 @@ public class TweetService {
     }
 
     public List<Tweet> getTweetsOrderByLastOne(User user, boolean allData) {
-
-
         List<Tweet> result;
 
         if (user == null) {
@@ -54,7 +52,6 @@ public class TweetService {
         Tweet result = tweetRepository.getOne(id);
         result.setCommentsNumber(commentRepository.countAllByTweet(result));
         if (allData) {
-
             result.setComments(commentRepository.getAllByParentAndTweet(null,result));
 
             for (Comment comment : result.getComments()) {
